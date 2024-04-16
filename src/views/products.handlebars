@@ -1,0 +1,66 @@
+<div>
+    {{#if userDB}}
+    <p>Hola <strong>{{userDB.first_name}}</strong>, estos son tus datos:</p>
+    <br>
+    <p>Nombre: <strong>{{userDB.first_name}}</strong></p>
+    <p>Apellido: <strong>{{userDB.last_name}}</strong></p>
+    <p>Email: <strong>{{userDB.email}}</strong></p>
+    <p>Rol: <strong>{{userDB.role}}</strong></p>
+    <p>Carrito número: <strong>{{userDB.cart}}</strong></p>
+    <br>
+    <a href="/api/products/create">
+        <button>Crear producto</button>
+    </a>
+    <a href="/api/carts/{{userDB.cart}}">
+        <button>Mostrar carrito</button>
+    </a>
+    <a href="/api/session/logout">
+        <button>Cerrar sesión</button>
+    </a>
+    {{else}}
+    <a href="/login">
+        <button>Iniciar sesión</button>
+    </a>
+    {{/if}}
+    <hr>
+    <br>
+    <h1>Productos</h1>
+    <hr>
+    <div>
+        {{#each docs}}
+        <li style="list-style: none;">
+            <img src="{{this.thumbnail}}" alt="Imagen del producto">
+            <h2>{{this.title}}</h2>
+            <p>Descripción: {{this.description}}</p>
+            <p>Precio: ${{this.price}}</p>
+            <p>Stock: {{this.stock}}</p>
+            <p>Categoría: {{this.category}}</p>
+            <p>Código único: {{this.code}}</p>
+            <a href="/api/products/{{this._id}}">
+                <button id="verMas" data-product-id="{{this._id}}">Ver más</button>
+            </a>
+            <button id="agregarAlCarrito" data-cart-id="{{this.cartId}}" data-product-id="{{this._id}}">Agregar al carrito</button>
+            <br>
+            <br>
+            <br>
+            <hr>
+        </li>
+        {{/each}}
+    </div>
+
+    <center>
+        {{#if hasPrevPage}}
+        <a href="/api/products?page={{prevPage}}">
+            <button>Anterior</button>
+        </a>
+        {{/if}}
+        <strong>Página {{this.page}} de {{this.totalPages}}</strong>
+        {{#if hasNextPage}}
+        <a href="/api/products?page={{nextPage}}">
+            <button>Siguiente</button>
+        </a>
+        {{/if}}
+    </center>
+</div>
+
+<script src="/static/js/index.js"></script>

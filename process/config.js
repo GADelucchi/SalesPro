@@ -11,9 +11,11 @@ dotenv.config({
 // Declarartion
 const port = process.env.PORT
 const enviroment = process.env.ENVIROMENT
+const jwtPrivateKey = process.env.JWT_PRIVATE_KEY
 
 // Exports
 module.exports = {
     port,
-    enviroment
+    enviroment,
+    jwtPrivateKey
 }
