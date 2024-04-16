@@ -1,0 +1,20 @@
+<div class="login">
+    <h1 class="login__h1">Formulario Login</h1>
+    <form id="cookieForm" action="/api/session/login" method="POST" class="login__form">
+        <label class="login__label">Email</label>
+        <input type="text" name="email" />
+        <br />
+        <label class="login__label">Contraseña</label>
+        <input type="password" name="password" />
+        <br />
+        <a href="/api/products">
+            <button class="login__button">Ingresar</button>
+        </a>
+        <a href="/register">
+            <button class="login__button">Registrarme</button>
+        </a>
+        <a href="/api/session/initrestorepass">
+            <button class="login__button">Recuperar contraseña</button>
+        </a>
+    </form>
+</div>
