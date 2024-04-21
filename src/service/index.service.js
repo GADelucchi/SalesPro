@@ -1,6 +1,6 @@
 // Imports
-const { DeviceDao, ClientDao, EmployeeDao, UserDao } = require('../dao/factory');
-const { DeviceRepository } = require('../repositories/device.repository');
+const { DeviceDao, ClientDao, EmployeeDao, UserDao } = require("../dao/factory");
+const { DeviceRepository } = require("../repositories/device.repository");
 const { ClientRepository } = require('../repositories/client.repository');
 const { EmployeeRepository } = require('../repositories/employee.repository');
 const { UserRepository } = require('../repositories/user.repository');
