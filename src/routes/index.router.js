@@ -17,9 +17,9 @@ const usersRouter = new UsersRouter()
 // Code
 router.use(`/`, viewsRouter.getRouter())
 
-router.use(`/api/devices`, devicesRouter.getRouter())
-
 router.use(`/api/clients`, clientsRouter.getRouter())
+
+router.use(`/api/devices`, devicesRouter.getRouter())
 
 router.use(`/api/employees`, employeesRouter.getRouter())
 

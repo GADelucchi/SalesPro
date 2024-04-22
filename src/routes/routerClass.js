@@ -23,7 +23,7 @@ class RouterClass {
                 await callback.apply(this, params)
             } catch (error) {
                 params[1].status(500).send(error)
-                logger.error(error)
+                logger.error(error + " routerClass error")
             }
         })
     }

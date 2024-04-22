@@ -1,5 +1,4 @@
 // Imports
-const mysql = require('mysql2-promise'); // Suponiendo que usas mysql2/promise
 
 // Class
 class ClientDao {
@@ -8,7 +7,7 @@ class ClientDao {
   }
 
   get = async () => {
-      const [clients] = await this.connection.query('SELECT * FROM clients');
+      const [clients] = await this.connection.query("SELECT * FROM clientes");
       return clients;
   }
 

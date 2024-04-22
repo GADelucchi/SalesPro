@@ -31,7 +31,7 @@ passport.use(passport.initialize())
 
 // Port
 const httpServer = app.listen(port, (error) => {
-  if (error) logger.info(`Error en el servidor`, error)
+  if (error) logger.error(`Error en el servidor`, error)
   logger.info(`Escuchando en el puerto: ${port}`);
 })
 

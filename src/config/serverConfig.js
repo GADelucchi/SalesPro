@@ -3,6 +3,9 @@ const mysql = require('mysql');
 const { SqlPassword, SqlHost, SqlUser, SqlDatabase, SqlPort } = require('../../process/config');
 const { logger } = require('./logger');
 
+// Code 
+
+
 // Export
 module.exports = {
     connectDB: async () => {
@@ -14,7 +17,7 @@ module.exports = {
             database: SqlDatabase,
             supportBigNumbers: true,
             dateStrings: true,
-            debug: true
+            // debug: true
             // trace: true
             // insecureAuth: true
         });
@@ -32,6 +35,6 @@ module.exports = {
             // (asumiendo que tus DAOs requieren un objeto de conexión)
             // ClientDao.setConnection(connection);
             // ... (similar para otros DAO)
-        });
+        })
     }
 };

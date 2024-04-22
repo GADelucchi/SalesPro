@@ -8,6 +8,12 @@ class ClientsRouter extends RouterClass {
   init() {
     this.get(`/`, [`PUBLIC`], async (req, res) => {
       const clients = await clientsController.getClients()
+      logger.info(clients)
+
+      res.status(200).send({
+        status: "Success",
+        message: "Entrando en GET clientes"
+      })
     })
 
     this.post(`/`, [`PUBLIC`], async (req, res) => {
