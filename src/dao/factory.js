@@ -9,10 +9,10 @@ let UserDao
 switch (persistence) {
     case 'SQL':
         connectDB()
-        const ClientDaoSql = require('./sql/client.sql')
-        const DeviceDaoSql = require('./sql/device.sql')
-        const EmployeeDaoSql = require('./sql/employee.sql')
-        const UserDaoSql = require('./sql/user.sql')
+        const ClientDaoSql = require('./sql/client.dao.js')
+        const DeviceDaoSql = require('./sql/device.dao.js')
+        const EmployeeDaoSql = require('./sql/employee.dao.js')
+        const UserDaoSql = require('./sql/user.dao.js')
 
         ClientDao = ClientDaoSql
         DeviceDao = DeviceDaoSql
