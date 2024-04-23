@@ -1,4 +1,5 @@
 // Imports
+const { connection } = require("../../config/serverConfig");
 
 // Class
 class ClientDao {
