@@ -13,7 +13,6 @@ const port = process.env.PORT
 const enviroment = process.env.ENVIROMENT
 const jwtPrivateKey = process.env.JWT_PRIVATE_KEY
 const persistence = process.env.PERSISTENCE
-const mongoUrl = process.env.MONGO_URL_LOCAL
 const SqlPassword = process.env.SQL_PASSWORD
 const SqlHost = process.env.SQL_HOST
 const SqlUser = process.env.SQL_USER
@@ -27,7 +26,6 @@ module.exports = {
     enviroment,
     jwtPrivateKey,
     persistence,
-    mongoUrl,
     SqlPassword,
     SqlHost,
     SqlUser,
