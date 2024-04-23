@@ -4,10 +4,11 @@ const { DeviceRepository } = require("../repositories/device.repository");
 const { ClientRepository } = require('../repositories/client.repository');
 const { EmployeeRepository } = require('../repositories/employee.repository');
 const { UserRepository } = require('../repositories/user.repository');
+const { connection } = require("../config/serverConfig");
 
 // Code
 const deviceService = new DeviceRepository(new DeviceDao())
-const clientService = new ClientRepository(new ClientDao())
+const clientService = new ClientRepository(new ClientDao(connection))
 const employeeService = new EmployeeRepository(new EmployeeDao())
 const userService = new UserRepository(new UserDao())
 
