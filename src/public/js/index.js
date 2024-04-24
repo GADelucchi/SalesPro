@@ -1,17 +1,17 @@
 Toastify({
-    text: "Producto agregado",
+    text: 'Producto agregado',
     duration: 5000,
     close: true,
-    gravity: "top",
-    position: "right",
+    gravity: 'top',
+    position: 'right',
     stopOnFocus: true,
 }).showToast()
 
 Toastify({
-    text: "Pagado!",
+    text: 'Pagado!',
     duration: 5000,
     close: true,
-    gravity: "top",
-    position: "right",
+    gravity: 'top',
+    position: 'right',
     stopOnFocus: true,
 }).showToast()

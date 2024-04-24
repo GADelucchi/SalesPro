@@ -1,8 +1,8 @@
 const socket = io()
 
-socket.on(`productos`, data => {
-    let div = document.getElementById(`productsCards`)
-    let productos = ``
+socket.on('productos', data => {
+    let div = document.getElementById('productsCards')
+    let productos = ''
     data.forEach((product) => {
         productos += `<div>
         <h2>Producto: ${product.title}</h2>

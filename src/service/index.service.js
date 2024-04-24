@@ -1,15 +1,14 @@
 // Imports
-const { DeviceDao, ClientDao, EmployeeDao, UserDao } = require("../dao/factory");
-const { DeviceRepository } = require("../repositories/device.repository");
-const { ClientRepository } = require('../repositories/client.repository');
-const { EmployeeRepository } = require('../repositories/employee.repository');
-const { UserRepository } = require('../repositories/user.repository');
+const ClientDaoSql = require('../dao/sql/client.dao.js')
+const DeviceDaoSql = require('../dao/sql/device.dao.js')
+const EmployeeDaoSql = require('../dao/sql/employee.dao.js')
+const UserDaoSql = require('../dao/sql/user.dao.js')
 
 // Code
-const deviceService = new DeviceRepository(new DeviceDao())
-const clientService = new ClientRepository(new ClientDao())
-const employeeService = new EmployeeRepository(new EmployeeDao())
-const userService = new UserRepository(new UserDao())
+const clientService = new ClientDaoSql()
+const deviceService = new DeviceDaoSql()
+const employeeService = new EmployeeDaoSql()
+const userService = new UserDaoSql()
 
 // Exports
 module.exports = {

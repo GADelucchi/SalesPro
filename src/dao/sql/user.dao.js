@@ -1,19 +1,20 @@
 // Imports
-const mysql = require('mysql2-promise'); // Suponiendo que usas mysql2/promise
+const connection = require('../../config/serverConfig');
 
 // Class
 class UserDao {
-  constructor(connection) {
-      this.connection = connection;
+  constructor() {
+      this.model = connection;
   }
 
   get = async () => {
-      const [clients] = await this.connection.query('SELECT * FROM users');
-      return clients;
+      const [result] = await this.model.query('SELECT * FROM usuarios');
+      return result;
   }
 
-  getById = async (uid) => {
-    const [clients] = await this.connection.query("SELECT * FROM clients WHERE id = ?", [uid])
+  getBySerial = async (uid) => {
+    const [result] = await this.model.query('SELECT * FROM usuarios WHERE id = ?', [uid])
+    return result
   }
 }
 
