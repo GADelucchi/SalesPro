@@ -1,8 +1,8 @@
 // Imports
-const { Router } = require(`express`);
-const jwt = require(`jsonwebtoken`);
-const { logger } = require(`../config/logger`);
-const { jwtPrivateKey } = require(`../../process/config`);
+const { Router } = require('express');
+const jwt = require('jsonwebtoken');
+const { logger } = require('../config/logger');
+const { jwtPrivateKey } = require('../../process/config');
 
 // Class
 class RouterClass {
@@ -23,7 +23,7 @@ class RouterClass {
                 await callback.apply(this, params)
             } catch (error) {
                 params[1].status(500).send(error)
-                logger.error(error + " routerClass error")
+                logger.error(error + ' routerClass error')
             }
         })
     }

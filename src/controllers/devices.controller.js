@@ -1,5 +1,5 @@
 // Import
-const { deviceService } = require(`../service/index.service`)
+const { deviceService } = require('../service/index.service')
 
 // Code
 class DeviceController {

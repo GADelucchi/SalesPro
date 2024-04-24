@@ -1,19 +1,20 @@
 // Imports
-const { connection } = require("../../config/serverConfig");
+const connection = require('../../config/serverConfig.js');
 
 // Class
 class ClientDao {
-  constructor(connection) {
-      this.connection = connection;
+  constructor() {
+    this.model = connection;
   }
 
   get = async () => {
-      const [clients] = await this.connection.query("SELECT * FROM clientes");
-      return clients;
+    const [result] = await this.model.query('SELECT * FROM clientes');
+    return result;
   }
 
   getById = async (cid) => {
-    const [clients] = await this.connection.query("SELECT * FROM clients WHERE id = ?", [cid])
+    const [result] = await this.model.query('SELECT * FROM clientes WHERE id_cliente = ?', [cid])
+    return result
   }
 }
 

@@ -1,5 +1,5 @@
 // Import
-const { userService } = require(`../service/index.service`)
+const { userService } = require('../service/index.service')
 
 // Code
 class UserController {

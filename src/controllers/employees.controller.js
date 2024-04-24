@@ -1,5 +1,5 @@
 // Import
-const { employeeService } = require(`../service/index.service`)
+const { employeeService } = require('../service/index.service')
 
 // Code
 class EmployeeController {
