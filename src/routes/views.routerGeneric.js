@@ -6,7 +6,7 @@ const { RouterClass } = require('./routerClass');
 class ViewRouter extends RouterClass {
     init() {
         this.get('/', ['PUBLIC'], async (req, res) => {
-            res.render('home')
+            res.render('landing')
         })
 
         this.get('/login', ['PUBLIC'], async (req, res) => {
@@ -15,6 +15,12 @@ class ViewRouter extends RouterClass {
 
         this.get('/register', ['PUBLIC'], async (req, res) => {
             res.render('registerForm', {
+                style: 'index.css'
+            })
+        })
+
+        this.get('/clientcreate', ['PUBLIC'], async (req, res) => {
+            res.render('clientCreate', {
                 style: 'index.css'
             })
         })

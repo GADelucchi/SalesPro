@@ -1,0 +1,25 @@
+error: Error al conectar con MySQL: Unknown database 'apple_sore_la_plata_bs_as' {"code":"ER_BAD_DB_ERROR","errno":1049,"sqlMessage":"Unknown database 'apple_sore_la_plata_bs_as'","sqlState":"42000","stack":"Error: Unknown database 'apple_sore_la_plata_bs_as'\n    at Packet.asError (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\packets\\packet.js:728:17)\n    at ClientHandshake.execute (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\commands\\command.js:29:26)\n    at Connection.handlePacket (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\connection.js:481:34)\n    at PacketParser.onPacket (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\connection.js:97:12)\n    at PacketParser.executeStart (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\packet_parser.js:75:16)\n    at Socket.<anonymous> (D:\\Codeo\\SalesPro\\SalesPro\\node_modules\\mysql2\\lib\\connection.js:104:25)\n    at Socket.emit (node:events:514:28)\n    at addChunk (node:internal/streams/readable:324:12)\n    at readableAddChunk (node:internal/streams/readable:297:9)\n    at Readable.push (node:internal/streams/readable:234:10)"}
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: undefined
+error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?' at line 1 {"code":"ER_PARSE_ERROR","errno":1064,"sql":"INSERT INTO clientes VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?' at line 1","sqlState":"42000"}
+error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1 {"code":"ER_PARSE_ERROR","errno":1064,"sql":"INSERT INTO clientes VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?)","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1","sqlState":"42000"}
+error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1 {"code":"ER_PARSE_ERROR","errno":1064,"sql":"INSERT INTO clientes (id_cliente, pasaporte, dni, cuit_cuil, primer_nombre, segundo_nombre, apellido, fecha_nacimiento, telefono, email) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?)","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1","sqlState":"42000"}
+error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1 {"code":"ER_PARSE_ERROR","errno":1064,"sql":"INSERT INTO clientes (id_cliente, pasaporte, dni, cuit_cuil, primer_nombre, segundo_nombre, apellido, fecha_nacimiento, telefono, email) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, ?)","sqlMessage":"You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?, ?, ?, ?, ?, ?, ?, ?, ?)' at line 1","sqlState":"42000"}

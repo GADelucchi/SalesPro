@@ -1,0 +1,28 @@
+<div>
+    <h1>Crear cliente</h1>
+    <br />
+    <form action="/api/clients" method="POST">
+        <input type="text" name="identificacion" placeholder="DNI/CUIT/CUIL/PASAPORTE" required="true"/>
+        <br />
+        <br />
+        <input type="text" name="primer_nombre" placeholder="Primer nombre" required="true"/>
+        <br />
+        <br />
+        <input type="text" name="segundo_nombre" placeholder="Segundo nombre"/>
+        <br />
+        <br />
+        <input type="text" name="apellido" placeholder="Apellido" required="true"/>
+        <br />
+        <br />
+        <input type="date" name="fecha_nacimiento" placeholder="Fecha de nacimiento" required="true"/>
+        <br />
+        <br />
+        <input type="number" name="telefono" placeholder="Telefono" required="true"/>
+        <br />
+        <br />
+        <input type="email" name="email" placeholder="Email" required="true"/>
+        <br />
+        <br>
+        <button type="submit">Crear Cliente</button>
+    </form>
+</div>
