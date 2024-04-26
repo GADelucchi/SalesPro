@@ -5,11 +5,11 @@ const { userService } = require('../service/index.service')
 class UserController {
     getUsers = async () => await userService.get()
 
-    getUsersPaginated = async (limit, page, category, sort) => await userService.getPaginated(limit, page, category, sort)
+    getUserByEmail = async (email) => await userService.getByEmail(email)
 
-    getUserById = async (uid) => await userService.getById(uid)
+    updateLastConection = async (email) => await userService.updateLastConection(email)
 
-    createUser = async (newUser) => await userService.create(newUser)
+    createUser = async (nuevoUsuario) => await userService.create(nuevoUsuario)
 
     updateUser = async (uid, userToReplace) => await userService.update(uid, userToReplace)
 

@@ -3,7 +3,7 @@ const { sessionService } = require('../service/index.service')
 
 // Code
 class DeviceController {
-    getDevices = async () => await sessionService.get()
+    postLogin = async () => await sessionService.get()
 
     getDevicesPaginated = async (limit, page, category, sort) => await sessionService.getPaginated(limit, page, category, sort)
 

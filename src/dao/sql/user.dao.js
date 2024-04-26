@@ -12,9 +12,13 @@ class UserDao {
       return result;
   }
 
-  getBySerial = async (uid) => {
-    const [result] = await this.model.query('SELECT * FROM usuarios WHERE id = ?', [uid])
+  getByEmail = async (email) => {
+    const [result] = await this.model.query('SELECT * FROM usuarios WHERE email = ?', [email])
     return result
+  }
+
+  updateLastConection = async (email) => {
+    const [result] = await this.model.query('INSERT TO usuarios', [email])
   }
 }
 

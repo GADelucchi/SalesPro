@@ -2,8 +2,23 @@
     <h1 class='home__h1'>¡Bienvenido!</h1>
     <hr />
     <h3 class='home__h3'>Este es el gestor de ventas</h3>
-    <a href='/login'>
-        <button type='button' class='home__button'>Iniciar sesión</button>
+    <br>
+    <br>
+    <h1 class="login__h1">Formulario Login</h1>
+    <form id="cookieForm" action="/api/session/login" method="POST" class="login__form">
+        <label class="login__label">Email</label>
+        <input type="text" name="email" />
+        <br />
+        <label class="login__label">Contraseña</label>
+        <input type="password" name="password" />
+        <br />
+        <button class="login__button">Ingresar</button>
+    </form>
+    <a href="/register">
+        <button class="login__button">Registrarme</button>
+    </a>
+    <a href="/api/session/initRestorePass">
+        <button class="login__button">Recuperar contraseña</button>
     </a>
 </div>
 
