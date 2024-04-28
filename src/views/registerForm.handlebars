@@ -1,15 +1,15 @@
 <div>
     <h1>Register</h1>
     <hr>
-    <form action="/api/session/registrar" method="POST">
-        <input type="text" name="nombre" placeholder="Nombre">
-        <input type="text" name="apellido" placeholder="Apellido">
+    <form action="/api/sessions/registrar" method="POST">
+        <input type="text" name="nombre" placeholder="Nombre" required="true">
+        <input type="text" name="apellido" placeholder="Apellido" required="true">
         <br>
         <br>
-        <input type="email" name="email" placeholder="Email">
+        <input type="email" name="email" placeholder="Email" required="true">
         <br>
         <br>
-        <input type="password" name="password" placeholder="Contraseña">
+        <input type="password" name="password" placeholder="Contraseña" required="true">
         <br>
         <br>
         <button ref="/login">Enviar</button>

@@ -56,7 +56,7 @@ class SessionsRouter extends RouterClass {
 
     this.post('/registrar', ['PUBLIC'], async (req, res) => {
       try {
-        let {
+        const {
           nombre,
           apellido,
           email,
@@ -65,37 +65,41 @@ class SessionsRouter extends RouterClass {
 
         const existeUsuario = await usersController.getUserByEmail(email)
 
-        if (existeUsuario) {
-          return res.send({
-            status: 'Error',
-            message: 'Email no disponible'
-          })
+        if (existeUsuario.length > 0) {
+          throw new Error('Email ya registrado')
         }
 
         const nuevoUsuario = {
-          nombre,
-          apellido,
-          email,
+          id_usuario: null,
+          nombre: nombre,
+          apellido: apellido,
+          email: email,
           password: createHash(password),
         }
 
-        const resultUsuario = await usersController.createUser(nuevoUsuario)
-
-        const tokenUsuario = {
-          nombre: nuevoUsuario.first_name,
-          apellido: nuevoUsuario.last_name,
-          email: nuevoUsuario.email,
+        const usuarioMayuscula = {}
+        for (const propiedad in nuevoUsuario) {
+          if (typeof nuevoUsuario[propiedad] === 'string') {
+            usuarioMayuscula[propiedad] = nuevoUsuario[propiedad].toUpperCase();
+          } else {
+            usuarioMayuscula[propiedad] = nuevoUsuario[propiedad];
+          }
         }
-        const regiter_token = generateToken(tokenUsuario)
 
-        res.render('login', {
-          status: 'Exito',
-          message: 'Usuario creado exitosamente',
-          payload: resultUsuario,
-          token: regiter_token
-        })
+        const resultUsuario = await usersController.createUser(usuarioMayuscula)
 
-        res.status(200).render('login')
+        if (resultUsuario.insertId > 0) {
+          const tokenUsuario = {
+            nombre: usuarioMayuscula.first_name,
+            apellido: usuarioMayuscula.last_name,
+            email: usuarioMayuscula.email,
+          }
+          const regiter_token = generateToken(tokenUsuario)
+
+          res.status(200).render('landing')
+        } else {
+          throw new Error('No se pudo crear el usuario')
+        }
       } catch (error) {
         logger.error(error)
       }

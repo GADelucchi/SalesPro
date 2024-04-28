@@ -19,7 +19,7 @@ class ClientDao {
 
   create = async (newClient) => {
     const { id_cliente, pasaporte, dni, cuit_cuil, primer_nombre, segundo_nombre, apellido, fecha_nacimiento, telefono, email } = newClient
-    const [result] = await this.model.query('INSERT INTO clientes (id_cliente, pasaporte, dni, cuit_cuil, primer_nombre, segundo_nombre, apellido, fecha_nacimiento, telefono, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 
+    const [result] = await this.model.query('INSERT INTO clientes VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', 
     [id_cliente, pasaporte, dni, cuit_cuil, primer_nombre, segundo_nombre, apellido, fecha_nacimiento, telefono, email])
     return result
   }
